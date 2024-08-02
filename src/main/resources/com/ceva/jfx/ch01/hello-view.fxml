@@ -45,7 +45,7 @@
                   <Font size="77.0" />
                </font>
             </Label>
-            <Label layoutX="483.0" layoutY="201.0" prefHeight="76.0" prefWidth="98.0" text="FX" textFill="#5382a1">
+            <Label layoutX="483.0" layoutY="197.0" prefHeight="76.0" prefWidth="98.0" text="FX" textFill="#5382a1">
                <font>
                   <Font size="77.0" />
                </font>

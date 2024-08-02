@@ -119,7 +119,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.ceva.prospring6.fxbasics/com.ceva.jfx.fxbasics.HelloApplication
+                            <mainClass>com.ceva.prospring6.fxbasics/com.ceva.jfx.ch01.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

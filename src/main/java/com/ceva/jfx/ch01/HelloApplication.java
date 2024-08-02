@@ -1,4 +1,4 @@
-package com.ceva.jfx.fxbasics;
+package com.ceva.jfx.ch01;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

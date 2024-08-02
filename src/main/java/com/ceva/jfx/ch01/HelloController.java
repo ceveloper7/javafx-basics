@@ -1,7 +1,4 @@
-package com.ceva.jfx.fxbasics;
-
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+package com.ceva.jfx.ch01;
 
 public class HelloController {
 //    @FXML
