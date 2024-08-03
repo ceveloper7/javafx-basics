@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.VBox?>
 
 <!--<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"-->
 <!--      fx:controller="com.ceva.jfx.fxbasics.HelloController">-->
@@ -20,13 +21,8 @@
 <!--</VBox>-->
 
 
-<GridPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-   </rowConstraints>
+
+<VBox alignment='CENTER' prefHeight='350.0' prefWidth='350.0' spacing='50.0' xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
@@ -56,4 +52,4 @@
          </effect>
       </AnchorPane>
    </children>
-</GridPane>
+</VBox>
