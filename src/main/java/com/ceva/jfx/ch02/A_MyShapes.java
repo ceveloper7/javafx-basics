@@ -1,5 +1,8 @@
 package com.ceva.jfx.ch02;
 
+import javafx.animation.Animation;
+import javafx.animation.Interpolator;
+import javafx.animation.RotateTransition;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -14,6 +17,7 @@ import javafx.scene.shape.Ellipse;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class A_MyShapes extends Application {
     @Override
@@ -45,8 +49,31 @@ public class A_MyShapes extends Application {
             r.setTopOffset(1.0);
             text.setEffect(r);
 
+            // 1.4 creamos una manejador de evento click (event handler) y lo agregamos al nodo text
+            text.setOnMouseClicked(mouseEvent -> {
+                System.out.println(mouseEvent.getSource().getClass() + " hizo click");
+            });
+
         // 2. container StackPane
         StackPane container = new StackPane();
+            // 2.1 Aplicamos Animacion: RotateTransition de 2.5 segundos
+            RotateTransition rotate = new RotateTransition(Duration.millis(2500), container);
+            rotate.setToAngle(360); // la animacion continua linealmente hasta el angulo 360
+            rotate.setFromAngle(0); // la animacion inicia en el angulo 0
+            rotate.setInterpolator(Interpolator.LINEAR);
+            // adjuntamos un manejador de evento click. La animacion se dispara cuando el usuario hace click dentro del container
+            container.setOnMouseClicked(mouseEvent -> {
+                // la animacion se aplica a todos los elementos secundarios del StackPane
+                // comprobamos el estado de la transicion.
+                if(rotate.getStatus().equals(Animation.Status.RUNNING)){
+                    // si la animacion esta en ejecucion, la pausamos
+                    rotate.pause();
+                }
+                else{
+                    rotate.play();
+                }
+            });
+
         container.getChildren().addAll(ellipse, text);
 //        container.setAlignment(text, Pos.BOTTOM_CENTER); // Alineamos unicamente el nodo text
 
