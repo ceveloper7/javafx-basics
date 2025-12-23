@@ -64,7 +64,10 @@ public class B_MyShapesProperties extends Application {
         Text text2 = new Text("");
         text2.setFont(new Font("Arial Bold", 18));
 
-        // 2. container StackPane
+        /**
+         * 2. Layout container StackPane -> StackPane apila sus nodos hijos de atras hacia adelante, segun el orden que se agregan.
+         * Los Layout Container organizan los nodos dentro de una escena
+         */
         StackPane container = new StackPane();
             // 2.1 Aplicamos Animacion: RotateTransition de 2.5 segundos
             RotateTransition rotate = new RotateTransition(Duration.millis(2500), container);
@@ -110,9 +113,11 @@ public class B_MyShapesProperties extends Application {
                     rotate.play();
                 }
             });
-
+        // agregamos multiples nodos al layout container (container)
         container.getChildren().addAll(ellipse, text, text2);
-        container.setAlignment(text2, Pos.BOTTOM_CENTER); // Alineamos unicamente el nodo text
+
+        // La alineacion por defecto es CENTER, pero podemos indicar una alineacion diferente
+        container.setAlignment(text2, Pos.BOTTOM_CENTER);
 
         // 3. Binding properties
             // 3.1 Binding unidireccional:text2 gira junto a container cuando se inicia una transicion de rotacion.
