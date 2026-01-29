@@ -22,6 +22,14 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+/**
+ * Property: Es un objeto observable que encapsulaun valor y permite observar, escuchar y vincular cambios de ese valor.
+ * Listener: Mecanismo que permite reaccionar automaticamente cuando ocurre un evento o cambia un valor,
+ * sin necesidad de consultar continuamente. Avisame cuando esto cambie y cuando pase, ejecuta este codigo
+ * Observable: significa que alguiien puede escuchar cambios se puede vincular a ese valor
+ * Binding: Significa esta propiedad depende de otra y JavaFX se encarga
+ */
+
 public class G_MyShapesProperties extends Application {
     @Override
     public void start(Stage stage) throws Exception {
