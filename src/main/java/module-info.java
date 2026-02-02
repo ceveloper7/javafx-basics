@@ -13,4 +13,5 @@ module com.ceva.jfx.fxbasics {
     opens com.ceva.jfx.ch01 to javafx.fxml;
     exports com.ceva.jfx.ch01;
     exports com.ceva.jfx.ch02;
+    exports com.ceva.jfx.ch02.properties_listeners;
 }
